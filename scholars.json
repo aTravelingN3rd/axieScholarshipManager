@@ -1,0 +1,111 @@
+var scholars=[
+    {
+        "slot":0,
+        "adress": "0xB4BEAdd9635e34e3F77FB23a7235deF79B1da902",
+        "name":"Candice",
+        "slpsnapshot":549
+    },
+    {
+        "slot":1,
+        "adress": "0x9D24f0c47C47aD368f8DD0b0AF6000732AaEcCcb",
+        "name":"PirateKingLiam",
+        "slpsnapshot":2287
+    },
+    {
+        "slot":2,
+        "adress": "0xa0A26544E5249bA957d0b120FeC03ffD4F2A463f",
+        "name":"Jm",
+        "slpsnapshot":2820
+    },
+    {
+        "slot":3,
+        "adress": "0x56b91456f84f51DC2c5a60f654496c3f5a092907",
+        "name":"JR",
+        "slpsnapshot":2274
+    },
+    {
+        "slot":4,
+        "adress": "0x5F8eB90E4301224a68AE525C8c8519DD9924d725",
+        "name":"Rica",
+        "slpsnapshot":3567
+    },
+    {
+        "slot":5,
+        "adress": "0x0A2CBde32eC40e418EF302EfC51b49F27f3c56d7",
+        "name":"Fiki",
+        "slpsnapshot":2938
+    },
+    {
+        "slot":6,
+        "adress": "0x64A6eFA2A2aEa9a745b84d65B64CA451a4fFeD48",
+        "name":"Abeng",
+        "slpsnapshot":1293
+    },
+    {
+        "slot":7,
+        "adress": "0xa2E93Ffc1259A72CD9B8Ed0E482e215C1dc7A14c",
+        "name":"Tallen (Gwenny)",
+        "slpsnapshot":3438
+    },
+    {
+        "slot":8,
+        "adress": "0x0Ddbf026f5898817e6654F46d14a3461F59b164e",
+        "name":"Dede",
+        "slpsnapshot":3281
+    },
+    {
+        "slot":9,
+        "adress": "0x6F36d7173e98edCdDE1E661B821E5183E509444e",
+        "name":"Lita",
+        "slpsnapshot":487
+    },
+    {
+        "slot":10,
+        "adress": "0x67dd0276C83179D8CC7E5A0fd38C5a1989D80cE2",
+        "name":"Jasmine",
+        "slpsnapshot":803
+    },
+    {
+        "slot":11,
+        "adress": "0xa5E37Be6BE5fB1be8Edfb76650778eE79a2f75ba",
+        "name":"Dede's bro",
+        "slpsnapshot":261
+    },
+    {
+        "slot":12,
+        "adress": "0x571fAb8849cBE13614b5d367ea24c95b6a110851",
+        "name":"Ipale",
+        "slpsnapshot":174
+    },
+    {
+        "slot":13,
+        "adress": "0x39d73f694124E02DcceF008aE34c3b47fbE0845d",
+        "name":"Casser",
+        "slpsnapshot":276
+    },
+    {
+        "slot":14,
+        "adress": "0xA175c655fcbDcd4410BE31296528902Ef3355657",
+        "name":"Ellen",
+        "slpsnapshot":203
+    },
+    {
+        "slot":15,
+        "adress": "0xb2273f8Fe616037123348e5Fb399fa55D2D6fAa9",
+        "name":"Apocalips",
+        "slpsnapshot":192
+    },
+    {
+        "slot":16,
+        "adress": "0x8753aBA6757BB84c396Bc4B10159975F80D621E6",
+        "name":"Wsted__",
+        "slpsnapshot":0
+    },
+    {
+        "slot":17,
+        "adress": "0x7134E0a5120c50Be2A3C31C18593daC0f6d1098B",
+        "name":"Warrior4fr",
+        "slpsnapshot":11
+    }
+
+]

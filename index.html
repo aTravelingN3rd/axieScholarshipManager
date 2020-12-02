@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Scholarship manager</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scholars.json"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Texturina&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+	<h1>Coop scholarship - Christmas Contest</h1>
+
+    <div class="ladder">
+    	<ul id=ladderList>
+    	</ul>
+    	<div id="stats"></div>
+    	<div id='Iceberg'><a href="https://marketplace.axieinfinity.com/axie/138641"><img src="Iceberg.png"></a></div>
+    	
+    </div>
+
+
+
+    <script>
+    
+    
+    var total=385;
+
+
+    getSlps(0);
+
+    console.log(scholars[0].adress);
+    
+ 
+   
+	function getSlps(index,callback){
+		if(index == scholars.length){
+			$("#stats").append("<p></p>");
+			$("#stats").append("<div id='prizeDiv'><p><b>Total SLP collected in December: </b>"+(total-385)+"(+385)</p><p><b>1st prize: </b>"+Math.round(total*0.2*0.5)+" slps + 1 virgin axie <br><b>2nd prize: </b>"+Math.round(total*0.2*0.3)+" slps <br><b>3rd prize: </b>"+Math.round(total*0.2*0.2)+" slps </p></div>");
+			sortList();
+
+			return;
+		}else{
+
+			$.getJSON('https://lunacia.skymavis.com/game-api/clients/'+scholars[index].adress+'/items/1', function (data) {
+			  scholars[index].slp = data.total-scholars[index].slpsnapshot;
+
+			  total= total+ scholars[index].slp;
+			  $("#ladderList").append("<li>"+scholars[index].name+" - "+ scholars[index].slp+"</li>");
+			  getSlps(index+1);
+			});
+		}
+	}
+
+	 function Comparator(a, b) {
+	   if (a.slp > b.slp) return -1;
+	   if (a.slp < b.slp) return 1;
+	   return 0;
+	 }
+
+	function sortList(){
+		var text='';
+		var sortedList = scholars.sort(Comparator);
+		for(var i = 0; i<sortedList.length;i++){
+			if(i<3){
+				text=text+"<li class='winners'>"+sortedList[i].name+" - "+sortedList[i].slp+"</li>"
+			}else{
+				text=text+"<li class>"+sortedList[i].name+" - "+sortedList[i].slp+"</li>"
+			}		
+		}
+		$("#ladderList").html(text);
+		console.log(sortedList);
+	}
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

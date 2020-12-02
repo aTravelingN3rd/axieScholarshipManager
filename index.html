@@ -10,7 +10,7 @@
 </head>
 
 <body>	
-	<p style="margin-right:20px; float:right">Tool developed by Psylo</p>
+	
 	<h1>Scholarship manager</h1>
 
     <div class="ladder">
@@ -38,7 +38,7 @@
 	function getSlps(index,callback){
 		if(index == scholars.length){
 			$("#stats").append("<p></p>");
-			$("#stats").append("<div id='prizeDiv'><p><b>Total SLP to collect: </b>"+total+"</p></div>");
+			$("#stats").append("<div id='prizeDiv'><p><b>Total SLP to collect: </b>"+total+"</p></div><p>Tool developed by Psylo</p>");
 			//Uncomment below to display prizes		 
 			/*$("#stats").append("<div id='prizeDiv'><p><b>Total SLP collected in December: </b>"+(total-385)+"(+385)</p><p><b>1st prize: </b>"+Math.round(total*0.2*0.5)+" slps + 1 virgin axie <br><b>2nd prize: </b>"+Math.round(total*0.2*0.3)+" slps <br><b>3rd prize: </b>"+Math.round(total*0.2*0.2)+" slps </p></div>");
 			*/sortList();

@@ -9,8 +9,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Texturina&display=swap" rel="stylesheet"> 
 </head>
 
-<body>
-	<h1>Coop scholarship - Christmas Contest</h1>
+<body>	
+	<p style="margin-right:20px; float:right">Tool developed by Psylo</p>
+	<h1>Scholarship manager</h1>
 
     <div class="ladder">
     	<ul id=ladderList>
@@ -25,7 +26,7 @@
     <script>
     
     
-    var total=385;
+    var total=0;
 
 
     getSlps(0);
@@ -37,14 +38,17 @@
 	function getSlps(index,callback){
 		if(index == scholars.length){
 			$("#stats").append("<p></p>");
-			$("#stats").append("<div id='prizeDiv'><p><b>Total SLP collected in December: </b>"+(total-385)+"(+385)</p><p><b>1st prize: </b>"+Math.round(total*0.2*0.5)+" slps + 1 virgin axie <br><b>2nd prize: </b>"+Math.round(total*0.2*0.3)+" slps <br><b>3rd prize: </b>"+Math.round(total*0.2*0.2)+" slps </p></div>");
-			sortList();
+			$("#stats").append("<div id='prizeDiv'><p><b>Total SLP to collect: </b>"+total+"</p></div>");
+			//Uncomment below to display prizes		 
+			/*$("#stats").append("<div id='prizeDiv'><p><b>Total SLP collected in December: </b>"+(total-385)+"(+385)</p><p><b>1st prize: </b>"+Math.round(total*0.2*0.5)+" slps + 1 virgin axie <br><b>2nd prize: </b>"+Math.round(total*0.2*0.3)+" slps <br><b>3rd prize: </b>"+Math.round(total*0.2*0.2)+" slps </p></div>");
+			*/sortList();
 
 			return;
 		}else{
 
 			$.getJSON('https://lunacia.skymavis.com/game-api/clients/'+scholars[index].adress+'/items/1', function (data) {
-			  scholars[index].slp = data.total-scholars[index].slpsnapshot;
+			  //Uncomment below if you want to use snapshot function
+			  scholars[index].slp = data.total//-scholars[index].slpsnapshot;
 
 			  total= total+ scholars[index].slp;
 			  $("#ladderList").append("<li>"+scholars[index].name+" - "+ scholars[index].slp+"</li>");

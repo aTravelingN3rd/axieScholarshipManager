@@ -8,4 +8,6 @@ Modify scholars.json with the adresses of your scholarship accounts and the name
 The parameters slpsnapshot is used to take a snapshot if you want to monitor earning from a special point.
 If a scholar withdraw his slp you also need to modify this parameter.
 
+I disable the prize function but you can uncomment it to use it.
+
 
